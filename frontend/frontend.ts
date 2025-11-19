@@ -5,7 +5,6 @@ const app = express();
 const port: number = 2000;
 const backendUrl = "http://backend:3601";
 
-// Настраиваем шаблонизатор
 app.set('views', path.join(__dirname));
 app.set('view engine', 'jade');
 
