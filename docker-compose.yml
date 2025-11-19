@@ -5,8 +5,6 @@ services:
     build: ./frontend
     ports:
       - "2000:2000"
-    depends_on:
-      - backend
 
   backend:
     build: ./backend
@@ -14,9 +12,7 @@ services:
       - "3601:3601"
 
   nginx:
-    build: 
-      context: ./nginx
-      dockerfile: Dockerfile
+    build: ./nginx
     ports:
       - "80:80"
     depends_on:
