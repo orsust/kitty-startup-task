@@ -6,7 +6,7 @@ app.set('views', path.join(__dirname, '/'));
 app.set('view engine', 'jade');
 
 const port: number = 3000;
-const backendUrl = "http://backend:3001";
+const backendUrl = "http://nginx/api";
 
 app.get('/', async (req, res) => {
     const cat_data = await fetch(`${backendUrl}/cat_get`);
